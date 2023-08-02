@@ -9,7 +9,11 @@ app.use(bodyParser.json());
 
 const API_KEY = process.env.API_KEY;
 const API_HOST = process.env.API_HOST;
+app.use(express.static('public'));
 
+app.get('/', (req, res) => {
+    return res.sendFile(path.join(__dirname, '/public', 'index.html'));
+});
 app.post('/convertcurrency', async (req, res) => {
     const { amount, oldCurrency, newCurrency } = req.body;
 
