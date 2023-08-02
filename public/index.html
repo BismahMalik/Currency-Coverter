@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <title>Currency Converter</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">
+      <h4>RegalConverter</h4>
+    </a>
+  </nav>
+  <form class="form" onsubmit="event.preventDefault();">
+    <p>Enter Amount</p>
+    <input type="text" placeholder="Amount" class="form-control" id="amount" name="amount" restricted>
+    <p>Enter Current Currency</p>
+    <input type="text" placeholder="Example Currency: USD" class="form-control" id="oldCurrency" name="oldCurrency"
+      restricted>
+    <p>Enter Required Currency</p>
+    <input type="text" placeholder="Example Currency: EUR" class="form-control" id="newCurrency" name="newCurrency"
+      restricted>
+    <button onclick="convertCurrency()" id="submitButton" type="submit" class="round-button">Convert</button>
+  </form>
+
+  <p id="result" class="results"></p>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
